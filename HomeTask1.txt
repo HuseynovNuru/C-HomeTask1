@@ -1,0 +1,89 @@
+using System;
+using System.Linq;
+
+namespace HomeTask1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Verilmiş a, b, c ədədləri üzərindən ən kiçiyini tapan proqram
+
+            int numberA = 10;
+            int numberB = 20;
+            int numberC = 30;
+
+            if (numberA <= numberB && numberA <= numberC)
+            {
+                Console.WriteLine(numberA);
+
+            }
+            else if (numberB <= numberA && numberB <= numberC)
+            {
+                Console.WriteLine(numberB);
+
+            }
+            else if (numberC <= numberA && numberC <= numberB)
+            {
+                Console.WriteLine(numberC);
+            }
+
+
+
+            //Verilmiş ədədlər siyahısındaki ən böyük ədədi tapan proqram
+
+            int[] numbers = { 2, 4, 6, 8, 10 };
+            int num = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                int max = numbers.Max();
+            }
+            Console.WriteLine(numbers.Max());
+
+
+
+            //Verilmiş ədədlər siyahısındaki 3 - ə bölünən ədədlərin ədədi ortasini(ortalamasını) tapan proqram
+
+            int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, };
+            int count = 0;
+            int sum = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 3 == 0) ;
+                {
+                    sum = sum + numbers[i];
+                    count++;
+                }
+
+
+            }
+            double average = sum / count;
+            Console.WriteLine(average);
+
+
+
+
+
+            //Verilmiş ədədlər siyahısında 3 rəqəmli ədəd olub olmadığını tapan alqoritm
+
+            int[] numbers = { 10, 77, 99, 100, 120, 145, 280, 360 };
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] >= 100 && numbers[i] <= 999)
+                {
+                    Console.WriteLine("Siyahidaki 3 reqemli ededler movcuddur");
+                    break;
+                }
+            }
+
+
+
+
+
+
+        }
+    }
+}
